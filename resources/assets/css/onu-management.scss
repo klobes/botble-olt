@@ -1,0 +1,353 @@
+/**
+ * ONU Management Styles
+ * Specific styles for ONU management pages
+ */
+
+.onu-management {
+    // ONU filters
+    .onu-filters {
+        background: white;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        
+        .filters-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            
+            .filter-group {
+                label {
+                    display: block;
+                    margin-bottom: 8px;
+                    font-weight: 500;
+                    color: #2c3e50;
+                    font-size: 0.875rem;
+                }
+                
+                select {
+                    width: 100%;
+                    padding: 8px 12px;
+                    border: 1px solid #ecf0f1;
+                    border-radius: 4px;
+                    background-color: white;
+                    cursor: pointer;
+                    
+                    &:focus {
+                        outline: none;
+                        border-color: #3498db;
+                    }
+                }
+            }
+        }
+    }
+    
+    // ONU card view
+    .onu-card {
+        background: white;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        
+        &:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .onu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            
+            .onu-serial {
+                font-size: 1.125rem;
+                font-weight: 600;
+                color: #2c3e50;
+                font-family: monospace;
+            }
+            
+            .onu-status-badge {
+                padding: 6px 12px;
+                border-radius: 12px;
+                font-size: 0.875rem;
+                font-weight: 500;
+                
+                &.online {
+                    background-color: rgba(#2ecc71, 0.1);
+                    color: #2ecc71;
+                }
+                
+                &.offline {
+                    background-color: rgba(#e74c3c, 0.1);
+                    color: #e74c3c;
+                }
+                
+                &.los {
+                    background-color: rgba(#f39c12, 0.1);
+                    color: #f39c12;
+                }
+                
+                &.dying-gasp {
+                    background-color: rgba(#e74c3c, 0.1);
+                    color: #e74c3c;
+                }
+            }
+        }
+        
+        .onu-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+            
+            .info-item {
+                .info-label {
+                    font-size: 0.75rem;
+                    color: #7f8c8d;
+                    margin-bottom: 4px;
+                    text-transform: uppercase;
+                }
+                
+                .info-value {
+                    font-weight: 500;
+                    color: #2c3e50;
+                    
+                    &.good { color: #2ecc71; }
+                    &.warning { color: #f39c12; }
+                    &.bad { color: #e74c3c; }
+                }
+            }
+        }
+        
+        .optical-power {
+            display: flex;
+            gap: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            
+            .power-item {
+                flex: 1;
+                text-align: center;
+                
+                .power-label {
+                    font-size: 0.75rem;
+                    color: #7f8c8d;
+                    margin-bottom: 8px;
+                    text-transform: uppercase;
+                }
+                
+                .power-value {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    
+                    &.good { color: #2ecc71; }
+                    &.warning { color: #f39c12; }
+                    &.bad { color: #e74c3c; }
+                }
+                
+                .power-unit {
+                    font-size: 0.875rem;
+                    color: #7f8c8d;
+                }
+            }
+        }
+        
+        .customer-info {
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            
+            .customer-name {
+                font-weight: 600;
+                color: #2c3e50;
+                margin-bottom: 8px;
+            }
+            
+            .customer-details {
+                font-size: 0.875rem;
+                color: #7f8c8d;
+                
+                .detail-item {
+                    margin-bottom: 4px;
+                    
+                    i {
+                        margin-right: 8px;
+                        width: 16px;
+                    }
+                }
+            }
+        }
+        
+        .onu-actions {
+            display: flex;
+            gap: 8px;
+            padding-top: 15px;
+            border-top: 1px solid #ecf0f1;
+            
+            button {
+                flex: 1;
+                padding: 8px 12px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.3s;
+                font-size: 0.875rem;
+                
+                i {
+                    margin-right: 4px;
+                }
+                
+                &.btn-view {
+                    background-color: #3498db;
+                    color: white;
+                    
+                    &:hover {
+                        background-color: darken(#3498db, 10%);
+                    }
+                }
+                
+                &.btn-configure {
+                    background-color: #9b59b6;
+                    color: white;
+                    
+                    &:hover {
+                        background-color: darken(#9b59b6, 10%);
+                    }
+                }
+                
+                &.btn-reboot {
+                    background-color: #f39c12;
+                    color: white;
+                    
+                    &:hover {
+                        background-color: darken(#f39c12, 10%);
+                    }
+                }
+                
+                &.btn-disable {
+                    background-color: #e74c3c;
+                    color: white;
+                    
+                    &:hover {
+                        background-color: darken(#e74c3c, 10%);
+                    }
+                }
+            }
+        }
+    }
+    
+    // ONU details modal
+    .onu-details-modal {
+        .signal-quality {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            
+            .signal-item {
+                text-align: center;
+                
+                .signal-icon {
+                    font-size: 2rem;
+                    margin-bottom: 10px;
+                    
+                    &.excellent { color: #2ecc71; }
+                    &.good { color: #27ae60; }
+                    &.fair { color: #f39c12; }
+                    &.poor { color: #e74c3c; }
+                }
+                
+                .signal-label {
+                    font-size: 0.875rem;
+                    color: #7f8c8d;
+                    margin-bottom: 8px;
+                }
+                
+                .signal-value {
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                    color: #2c3e50;
+                }
+            }
+        }
+        
+        .configuration-info {
+            .config-item {
+                display: flex;
+                justify-content: space-between;
+                padding: 12px 0;
+                border-bottom: 1px solid #ecf0f1;
+                
+                &:last-child {
+                    border-bottom: none;
+                }
+                
+                .config-label {
+                    font-weight: 500;
+                    color: #7f8c8d;
+                }
+                
+                .config-value {
+                    font-weight: 600;
+                    color: #2c3e50;
+                }
+            }
+        }
+    }
+    
+    // Bulk actions
+    .bulk-actions {
+        background: white;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        
+        .selected-count {
+            font-weight: 500;
+            color: #2c3e50;
+            margin-right: auto;
+        }
+        
+        button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.875rem;
+        }
+    }
+    
+    // Responsive
+    @media (max-width: 768px) {
+        .onu-filters .filters-row {
+            grid-template-columns: 1fr;
+        }
+        
+        .onu-card {
+            .onu-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .optical-power {
+                flex-direction: column;
+            }
+            
+            .onu-actions {
+                flex-direction: column;
+            }
+        }
+    }
+}

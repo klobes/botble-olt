@@ -1,0 +1,24 @@
+{
+    "name": "botble/fiberhome-olt-manager",
+    "description": "Fiberhome OLT Management Plugin for Botble CMS - SNMP based OLT/ONU management",
+    "type": "botble-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Botble Technologies",
+            "email": "contact@botble.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "botble/platform": "^7.0",
+        "ext-snmp": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Botble\\FiberHomeOLTManager\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

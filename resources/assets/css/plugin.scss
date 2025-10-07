@@ -1,0 +1,334 @@
+/**
+ * FiberHome OLT Manager Plugin Styles
+ * Main stylesheet for the plugin
+ */
+
+// Variables
+$primary-color: #3498db;
+$success-color: #2ecc71;
+$warning-color: #f39c12;
+$danger-color: #e74c3c;
+$info-color: #3498db;
+$dark-color: #2c3e50;
+$light-color: #ecf0f1;
+
+$border-radius: 4px;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+
+// Mixins
+@mixin card-style {
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+@mixin button-style($color) {
+    background-color: $color;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: $transition;
+    
+    &:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// General Styles
+.fiberhome-olt-manager {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    // Cards
+    .card {
+        @include card-style;
+        
+        .card-header {
+            border-bottom: 1px solid $light-color;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            
+            h3 {
+                margin: 0;
+                font-size: 1.5rem;
+                color: $dark-color;
+            }
+        }
+        
+        .card-body {
+            padding: 0;
+        }
+    }
+    
+    // Buttons
+    .btn-primary {
+        @include button-style($primary-color);
+    }
+    
+    .btn-success {
+        @include button-style($success-color);
+    }
+    
+    .btn-warning {
+        @include button-style($warning-color);
+    }
+    
+    .btn-danger {
+        @include button-style($danger-color);
+    }
+    
+    .btn-info {
+        @include button-style($info-color);
+    }
+    
+    // Status badges
+    .status-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        
+        &.online {
+            background-color: rgba($success-color, 0.1);
+            color: $success-color;
+        }
+        
+        &.offline {
+            background-color: rgba($danger-color, 0.1);
+            color: $danger-color;
+        }
+        
+        &.warning {
+            background-color: rgba($warning-color, 0.1);
+            color: $warning-color;
+        }
+    }
+    
+    // Tables
+    .data-table {
+        width: 100%;
+        
+        thead {
+            background-color: $light-color;
+            
+            th {
+                padding: 12px;
+                text-align: left;
+                font-weight: 600;
+                color: $dark-color;
+            }
+        }
+        
+        tbody {
+            tr {
+                border-bottom: 1px solid $light-color;
+                transition: $transition;
+                
+                &:hover {
+                    background-color: rgba($primary-color, 0.05);
+                }
+                
+                td {
+                    padding: 12px;
+                }
+            }
+        }
+    }
+    
+    // Forms
+    .form-group {
+        margin-bottom: 20px;
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: $dark-color;
+        }
+        
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid $light-color;
+            border-radius: $border-radius;
+            transition: $transition;
+            
+            &:focus {
+                outline: none;
+                border-color: $primary-color;
+                box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+            }
+        }
+        
+        .form-help {
+            font-size: 0.875rem;
+            color: #7f8c8d;
+            margin-top: 4px;
+        }
+    }
+    
+    // Modals
+    .modal {
+        .modal-header {
+            border-bottom: 1px solid $light-color;
+            padding: 20px;
+            
+            h4 {
+                margin: 0;
+                color: $dark-color;
+            }
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .modal-footer {
+            border-top: 1px solid $light-color;
+            padding: 20px;
+            text-align: right;
+            
+            button {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    // Statistics widgets
+    .stat-widget {
+        @include card-style;
+        text-align: center;
+        
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            
+            &.primary { color: $primary-color; }
+            &.success { color: $success-color; }
+            &.warning { color: $warning-color; }
+            &.danger { color: $danger-color; }
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: $dark-color;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: #7f8c8d;
+            text-transform: uppercase;
+        }
+    }
+    
+    // Alerts
+    .alert {
+        padding: 15px;
+        border-radius: $border-radius;
+        margin-bottom: 20px;
+        
+        &.alert-success {
+            background-color: rgba($success-color, 0.1);
+            border-left: 4px solid $success-color;
+            color: darken($success-color, 20%);
+        }
+        
+        &.alert-warning {
+            background-color: rgba($warning-color, 0.1);
+            border-left: 4px solid $warning-color;
+            color: darken($warning-color, 20%);
+        }
+        
+        &.alert-danger {
+            background-color: rgba($danger-color, 0.1);
+            border-left: 4px solid $danger-color;
+            color: darken($danger-color, 20%);
+        }
+        
+        &.alert-info {
+            background-color: rgba($info-color, 0.1);
+            border-left: 4px solid $info-color;
+            color: darken($info-color, 20%);
+        }
+    }
+    
+    // Loading spinner
+    .loading-spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba($primary-color, 0.3);
+        border-radius: 50%;
+        border-top-color: $primary-color;
+        animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+    
+    // Action buttons
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+        
+        .btn {
+            padding: 6px 12px;
+            font-size: 0.875rem;
+        }
+    }
+    
+    // Responsive
+    @media (max-width: 768px) {
+        .card {
+            padding: 15px;
+        }
+        
+        .stat-widget {
+            margin-bottom: 15px;
+        }
+        
+        .data-table {
+            font-size: 0.875rem;
+            
+            thead th,
+            tbody td {
+                padding: 8px;
+            }
+        }
+    }
+}
+
+// Utility classes
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }

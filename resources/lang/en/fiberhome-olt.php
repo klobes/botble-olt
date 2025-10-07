@@ -1,0 +1,87 @@
+<?php
+
+return [
+    'menu_name' => 'OLT Manager',
+    'devices' => 'OLT Devices',
+    'onus' => 'ONUs',
+    'bandwidth_profiles' => 'Bandwidth Profiles',
+    'dashboard' => 'Dashboard',
+    
+    // Dashboard
+    'total_olts' => 'Total OLTs',
+    'online_olts' => 'Online OLTs',
+    'total_onus' => 'Total ONUs',
+    'online_onus' => 'Online ONUs',
+    'total_pon_ports' => 'Total PON Ports',
+    'active_pon_ports' => 'Active PON Ports',
+    'recent_olts' => 'Recent OLTs',
+    'recent_onus' => 'Recent ONUs',
+    'offline_onus' => 'Offline ONUs',
+    'performance_alerts' => 'Performance Alerts',
+    
+    // OLT Devices
+    'add_device' => 'Add OLT Device',
+    'edit_device' => 'Edit OLT Device',
+    'device_name' => 'Device Name',
+    'ip_address' => 'IP Address',
+    'snmp_community' => 'SNMP Community',
+    'snmp_version' => 'SNMP Version',
+    'snmp_port' => 'SNMP Port',
+    'location' => 'Location',
+    'description' => 'Description',
+    'status' => 'Status',
+    'last_seen' => 'Last Seen',
+    'actions' => 'Actions',
+    'sync_data' => 'Sync Data',
+    'test_connection' => 'Test Connection',
+    
+    // ONUs
+    'add_onu' => 'Add ONU',
+    'edit_onu' => 'Edit ONU',
+    'onu_name' => 'ONU Name',
+    'mac_address' => 'MAC Address',
+    'serial_number' => 'Serial Number',
+    'password' => 'Password',
+    'auth_type' => 'Auth Type',
+    'olt_device' => 'OLT Device',
+    'pon_port' => 'PON Port',
+    'distance' => 'Distance',
+    'optical_power' => 'Optical Power',
+    'rx_power' => 'RX Power',
+    'tx_power' => 'TX Power',
+    'enable' => 'Enable',
+    'disable' => 'Disable',
+    'reboot' => 'Reboot',
+    
+    // Bandwidth Profiles
+    'add_profile' => 'Add Profile',
+    'edit_profile' => 'Edit Profile',
+    'profile_name' => 'Profile Name',
+    'up_min_rate' => 'Upstream Min Rate (kbps)',
+    'up_max_rate' => 'Upstream Max Rate (kbps)',
+    'down_min_rate' => 'Downstream Min Rate (kbps)',
+    'down_max_rate' => 'Downstream Max Rate (kbps)',
+    'fixed_rate' => 'Fixed Rate (kbps)',
+    
+    // Status
+    'online' => 'Online',
+    'offline' => 'Offline',
+    'error' => 'Error',
+    'los' => 'LOS',
+    'dying_gasp' => 'Dying Gasp',
+    
+    // Messages
+    'device_added' => 'OLT device added successfully',
+    'device_updated' => 'OLT device updated successfully',
+    'device_deleted' => 'OLT device deleted successfully',
+    'onu_added' => 'ONU added successfully',
+    'onu_updated' => 'ONU updated successfully',
+    'onu_deleted' => 'ONU deleted successfully',
+    'profile_created' => 'Bandwidth profile created successfully',
+    'profile_updated' => 'Bandwidth profile updated successfully',
+    'profile_deleted' => 'Bandwidth profile deleted successfully',
+    'sync_success' => 'Data synchronized successfully',
+    'sync_failed' => 'Failed to synchronize data',
+    'connection_success' => 'Connection successful',
+    'connection_failed' => 'Connection failed',
+];

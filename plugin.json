@@ -1,0 +1,10 @@
+{
+    "name": "OLT Management",
+    "namespace": "Botble\\FiberHomeOLTManager\\",
+    "provider": "Botble\\FiberHomeOLTManager\\Providers\\FiberHomeOLTManagerServiceProvider",
+    "author": "Your Name",
+    "url": "https://github.com/yourusername/botble-olt-management",
+    "version": "1.0.0",
+    "description": "Complete OLT and ONU device management system with SNMP monitoring and Supabase integration",
+    "minimum_core_version": "7.0.0"
+}
